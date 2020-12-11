@@ -6,11 +6,31 @@
 <script>
 
 //------------------------------------
+window.onload = init;
+
+var global_words;
+var global_table;
+//------------------------------------
 //  
 //------------------------------------  
+function init(){
+    makePuzzle(document.getElementById('puzzle'));
+    getWordBank(document.getElementById('wordbank'));
+}
+//------------------------------------
+//  
+//------------------------------------  
+function solve(){
+
+
+}
+//------------------------------------
+//  
+//------------------------------------  
+
 function makePuzzle(handle) {
     var puzzle = handle.value;
-    var table = makeTable(puzzle);
+    global_table = makeTable(puzzle);
     
     
 
@@ -35,8 +55,10 @@ function makeTable(text) {
 //------------------------------------
 //  
 //------------------------------------ 
+
 function getWordBank(handle){
     var words = handle.value.match(/[a-zA-Z]+/g);
+    global_words=words;
     
 }
 
