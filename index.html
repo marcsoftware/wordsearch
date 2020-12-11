@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<title>wordsearc</title>
+<script>
+
+//------------------------------------
+//  
+//------------------------------------  
+function makePuzzle(handle) {
+    var puzzle = handle.value;
+    var table = makeTable(puzzle);
+    
+    
+
+
+}
+
+//------------------------------------
+//  
+//------------------------------------ 
+function makeTable(text) {
+    var table = text.trim().split("\n");
+
+     table = table.map(function(x){
+                    x=x.replace(/[^a-zA-Z]/g);
+                    return x.split(""); 
+                    }
+                )
+    return table;
+
+}
+
+//------------------------------------
+//  
+//------------------------------------ 
+function getWordBank(handle){
+    var words = handle.value.match(/[a-zA-Z]+/g);
+    
+}
+
+
+</script>
+<body>
+
+
+
+
+
+
+<textarea id="puzzle" onkeyup='makePuzzle(this)'>
+REVAPORATIONQXIXTMCLT
+QRRLNXWCIAKWAAZLHMGAU
+HNEEOHTFGRYCXYCHVPSBB
+TTIYIIUJUCPQNGQLALEIE
+IYOISCHDXUBPJQJCAKVHA
+GUUEOLAVFSBEWSUNFZAAC
+DHNARQBLCNWEOTPAGSWGH
+FNIPEBBPGJLIDURPLPDQM
+VFFONURTYULZRRXRPGDBI
+ENPBwindNKTIZVOEBCGYI
+PPZTIDENKFRWATWCVQRUT
+CGFCUFNCrGOLBKYIKDESY
+TNOITARIaSNARTUPYOTNH
+QIEJDJQGiOEEAIYIRKAUW
+ORWTSLUInTVGSUSTEEWHQ
+AEAWZLLTKOUXIZSAGBDQB
+IHGATZACDCZWONBTJINWT
+UTYBCDHLKGENNGRITSUHX
+UACQINOITASNEDNOCROUG
+YEQXXTBWYNLNVYRNQGRCL
+JWOHCNVNCQMNTAAENMGGL
+</textarea><br/>
+<textarea id="wordbank" onkeyup='getWordBank(this)'>wind rain</textarea><br/>
+<div id='solution'></div>
+</body>
+</html>
+
+
