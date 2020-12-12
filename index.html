@@ -29,6 +29,7 @@ function solve(){
         var results = search(firstLetter); // get list of x,y coords 
          //loop through those coords.
          for(var j;j<results.length;j++){
+            
             // ... is theire a [2nd letter ajacent to those coords]
                 // if yes => calculatre vector.
                 //  add vector to word bank and see if they match.
@@ -47,7 +48,19 @@ function solve(){
 //  return x,y of every LETTER
 //------------------------------------  
 function search(letter){
+    var list=[];
+    for(var i =0;i<global_table.length;i++){
+        for(var j=0;j<global_table[i].length;j++){
+            if(global_table[i][j]){
+                var x = [i,j];
+                list.push(x);
 
+            }
+
+        }
+
+    }
+    
 }
 //------------------------------------
 //  
