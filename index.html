@@ -26,10 +26,11 @@ function solve(){
     //loop through list of words
     for(var i=0;i<global_words.length;i++){
         var firstLetter = global_words[i][0];
+        var secondLetter = global_words[i][1];
         var results = search(firstLetter); // get list of x,y coords 
          //loop through those coords.
          for(var j;j<results.length;j++){
-            
+            var vectors = getVectors([i,j],secondLetter);
             // ... is theire a [2nd letter ajacent to those coords]
                 // if yes => calculatre vector.
                 //  add vector to word bank and see if they match.
@@ -45,6 +46,12 @@ function solve(){
 }
 
 //------------------------------------
+//  
+//------------------------------------  
+function getVectors(coords,secondLetter){
+
+}
+//------------------------------------
 //  return x,y of every LETTER
 //------------------------------------  
 function search(letter){
@@ -59,7 +66,10 @@ function search(letter){
 
         }
 
+
     }
+
+    return list;
     
 }
 //------------------------------------
